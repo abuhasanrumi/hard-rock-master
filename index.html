@@ -115,7 +115,7 @@
         })
 
 
-        // Getting Lyrics
+        // Getting Lyrics from API
         function getLyrics(artist, songTitle){
             fetch(`https://api.lyrics.ovh/v1/${artist}/${songTitle}`)
             .then(res => res.json())
