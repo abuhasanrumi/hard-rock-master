@@ -42,3 +42,6 @@ body{
 .lead, .lyrics-name {
     margin-bottom: 0;
 }
+audio {
+    margin-top: 10px;
+}
