@@ -18,7 +18,7 @@
 <body>
     <div class="container">
         <nav class="navbar  navbar-dark my-3">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Hard Rock Solution">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,9 +94,8 @@
                         const songTitle = song.title;
                         const type = song.type;
                         const album = song.album.title;
-                        const albumCover = song.album.cover_big;
+                        const albumCover = song.album.cover_medium;
                         const artist = song.artist.name;
-                        const audio = song.preview;
 
                         document.getElementById('resultArea').innerHTML += `<div class="single-result row align-items-center my-3 p-3">
                                                                                 <div class="col-md-2">
@@ -106,11 +105,7 @@
                                                                                     <h3 class="lyrics-name">${songTitle}</h3>
                                                                                     <p class="album lead">Album: ${album}</span></p>
                                                                                     <p class="author lead">${type} by <span>${artist}</span></p>
-                                                                                    <p class="audio-preview lead">Audio Preview:</p>
-                                                                                    <audio controls>
-                                                                                        <source src="${audio}" type="audio/mpeg">
-                                                                                        Your browser does not support the audio element.
-                                                                                    </audio>
+                                                                                    
                                                                                 </div>
                                                                                 <div class="col-md-3 text-md-right text-center">
                                                                                     <button onclick="getLyrics('${artist}','${songTitle}')" class="btn btn-success" id="lyricsBtn">Get Lyrics</button>
