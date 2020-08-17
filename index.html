@@ -93,17 +93,23 @@
                         const songTitle = song.title;
                         const type = song.type;
                         const album = song.album.title;
-                        const albumCover = song.album.cover_medium;
+                        const albumCover = song.album.cover_big;
                         const artist = song.artist.name;
+                        const audio = song.preview;
 
                         document.getElementById('resultArea').innerHTML += `<div class="single-result row align-items-center my-3 p-3">
                                                                                 <div class="col-md-2">
                                                                                     <img class="img-thumbnail" src="${albumCover}" alt="Cover Picture">
-                                                                                    </div>
-                                                                                    <div class="col-md-7">
+                                                                                </div>
+                                                                                <div class="col-md-7">
                                                                                     <h3 class="lyrics-name">${songTitle}</h3>
                                                                                     <p class="album lead">Album: ${album}</span></p>
                                                                                     <p class="author lead">${type} by <span>${artist}</span></p>
+                                                                                    <p class="audio-preview lead">Audio Preview:</p>
+                                                                                    <audio controls>
+                                                                                        <source src="${audio}" type="audio/mpeg">
+                                                                                        Your browser does not support the audio element.
+                                                                                    </audio>
                                                                                 </div>
                                                                                 <div class="col-md-3 text-md-right text-center">
                                                                                     <button onclick="getLyrics('${artist}','${songTitle}')" class="btn btn-success" id="lyricsBtn">Get Lyrics</button>
